@@ -12,4 +12,20 @@ function writeToFile(filename,answers) {
     svgString += "<g>";
 
     svgString += `${answers.shape}`;
+
+    let shapeChoice;
+    if (answers.shape === "Circle") {
+        shapeChoice = new Circle();
+        svgString += `<circle cx="150" cy="115" r="80" fill= "${answers.shapeBackgroudColor}" />`;
+    } else if (answers.shape === "Triangle") {
+        shapeChoice = new Triangle();
+        svgString += `<polygon points="150,18 244,182 56,182" fill="${answers.shapeBackgroudColor}"/>`;
+    } else {
+        shapeChoice = new Square();
+        svgString += `<rec x="73" y="40" width="160" height="160" fill="${"shapeBackgroudColor"}"/>`
+    }
+svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}" >${answers.text}</text>`;
+
+svgString += "</g>";
+svgString += "</svg>";
 }
