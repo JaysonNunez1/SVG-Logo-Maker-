@@ -33,3 +33,30 @@ fs.writeFile(filename, svgString, (err) => {
     err  ? console.log(err) : console.log('The file was saved!');
     });
 }
+
+function promptUser() {
+    inquirer.prompt([
+     {
+        type: 'list',
+        name: 'shape',
+        message: "What shape would you like to create?",
+        choices: ['Circle','Triangle','Square']
+      },
+      {
+          type:'input',
+          name:'shapeBackgroudColor',
+          message:"What color do you want the shape's background to be?"
+      },
+      {
+           type:'input',
+           name:'text',
+           message:"Text inside of the logo",
+      },
+      {
+        type:'input',
+        name:'textColor',
+        message:"What color do you want the text to be?",
+        },
+    ])
+
+
