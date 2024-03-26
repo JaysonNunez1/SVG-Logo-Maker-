@@ -59,4 +59,14 @@ function promptUser() {
         },
     ])
 
+    .then((answers) =>{
+        if (answers.text.length > 3){
+            console.log ("Must be 3 characters long");
+            promptUser ();
+        } else{
+            writeToFile("logo.svg",answers);
+        }
+    });
+}
 
+promptUser();
