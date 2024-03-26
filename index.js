@@ -28,4 +28,8 @@ svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${
 
 svgString += "</g>";
 svgString += "</svg>";
+
+fs.writeFile(filename, svgString, (err) => {
+    err  ? console.log(err) : console.log('The file was saved!');
+    });
 }
