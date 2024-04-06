@@ -26,3 +26,4 @@ Once all the questions are answered a logo.svg file will be generated with the l
 Once users open up the logo.svg file it will take them to the browser where they can see there created logo.
 
 ## Preview 
+![Preview](./assets/svg%20screen%20shot.png)
